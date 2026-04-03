@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "trampoBot"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi[standard]>=0.135.3", # Inclui uvicorn e ferramentas recomendadas
+    "sqlalchemy>=2.0.38",         # Versão estável da linha 2.0
+    "pydantic>=2.10.0",           # Versão 2.x (essencial para FastAPI moderno)
+    "dramatic>=0.4.0",            # Biblioteca de processamento em background
+    "pydantic-ai>=1.77.0",
+    "openai>=2.30.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",          # Framework de testes
+    "pytest-cov>=5.0.0",      # Plugin para cobertura de código
+]
